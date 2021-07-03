@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Best Gadget Finder</title>
+</head>
+
+<style>
+    .product-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border-bottom: 1px solid rgba(0, 0, 0, .125);
+    }
+
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        width: 100%;
+    }
+
+    .styled-table thead tr {
+        background-color: darkslategrey;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+        max-width: 300px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid darkslategrey;
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+        <div style="background:transparent !important" class="jumbotron">
+            <div style="font-family: 'Pacifico', cursive;">
+                <p>
+                    <center>
+                        <font size="8" style="color: darkslategrey;">Best Gadget Finder</font>
+                    </center>
+                </p>
+            </div>
+        </div>
+
+
+
+        <form action="/search/results" method="post">
+            <div class="input-group mb-3 p-4 mx-auto" class="mx-auto" style="width: 600px">
+                <input class="btn btn-success" type="submit">
+                <input type="text" class="form-control" placeholder="search your product..." name='input'
+                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+        </form>
+
+
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">Name</th>
+                    <th colspan="2" style="text-align: center;">Amazon</th>
+                    <th colspan="2" style="text-align: center;">Flipkart</th>
+                    <th colspan="2" style="text-align: center;">Snapdeal</th>
+
+                </tr>
+            </thead>
+
+            <thead>
+                <tr>
+                    <th></th>
+                    <th style="text-align: center;">Price</th>
+                    <th style="text-align: center;">Link</th>
+                    <th style="text-align: center;">Price</th>
+                    <th style="text-align: center;">Link</th>
+                    <th style="text-align: center;">Price</th>
+                    <th style="text-align: center;">Link</th>
+
+                </tr>
+            </thead>
+
+            {% for hit in results['hits']['hits'] %}
+            <tbody>
+                <tr>
+                    <td>{{ hit['_source']['New_Name'] }}</td>
+                    <td style="text-align: center;">
+                        <pre>{{ hit['_source']['Amazon_SalesPrice'] }}</pre>
+                    </td>
+                    <td style="text-align: center;"><a href='{{ hit['_source']['Amazon_ProductLink'] }}''
+                            target="_blank"><button type="button" class="btn btn-outline-success">Buy Now</button></td>
+                    </a>
+                    <td style="text-align: center;">
+                        <pre>{{ hit['_source']['Flipkart_SalesPrice'] }}</pre>
+                    </td>
+                    <td style="text-align: center;"><a href='{{ hit['_source']['Flipkart_ProductLink'] }}'
+                            target="_blank"><button type="button" class="btn btn-outline-success">Buy Now</button></td>
+                    </a>
+                    <td style="text-align: center;">
+                        <pre>{{ hit['_source']['Snapdeal_SalesPrice'] }}</pre>
+                    </td>
+                    <td style="text-align: center;"><a href='{{ hit['_source']['Snapdeal_ProductLink'] }}'
+                            target="_blank"><button type="button" class="btn btn-outline-success">Buy Now</button></td>
+                    </a>
+                </tr>
+            </tbody>
+            {% endfor %}
+
+        </table>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
