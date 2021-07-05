@@ -41,17 +41,11 @@ from the database.
 API which is used for managing http requests. Here we used fetch API function to get the data from elastic search. 
 And used this data to display the result in frontend.
 
-
-
-
-
-
-
-
-
-
-
-   As a final 
+As a final 
 result we can see a website with three sources Amazon Flipkart and Snapdeal. Also, there is 
 a button provided like buy now, by clicking on it user will automatically get redirected to the 
 product link and can buy the desired product
+
+
+https://user-images.githubusercontent.com/66164268/124423829-9084ab00-dd83-11eb-9409-1ee77d6e507f.mp4
+
