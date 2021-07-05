@@ -1,7 +1,7 @@
 
 # Best Gadget Finder
 
-End-to-End Data Science group project conduct by Packt.
+End-to-End Data Science group project conduct by TeamEpic.
 
 ## Problem Statement:
 Best Gadget Finder, a new startup to help users compare products at a single platform. It requires to pull data from various e-commerce websites and then compare product names across e-commerce websites. And then having a UI to search gadgets and see a detailed comparative UI.
