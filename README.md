@@ -7,6 +7,23 @@ End-to-End Data Science group project conduct by Packt & TeamEpic.
 Best Gadget Finder, a new startup to help users compare products at a single platform. It requires to pull data from various e-commerce websites and then compare product names across e-commerce websites. And then having a UI to search gadgets and see a detailed comparative UI.
 
 
+## Technology stack
+
+| Element   | Description   | 
+| :-------- | :------- |
+| **Python** | Programming language |
+| **BeautifulSoup** |  Python library used for web scraping  |
+| **Selenium** | Used to automate web application |
+| **Pandas** |  Python library used for data manipulation & analysis |
+| **Elasticsearch** | Full-text search and analytics engine |
+| **Kibana** | Used for visualizing Elasticsearch data |
+| **Requests** | Python library used for making HTTP requests |
+| **Postman** | API client helps to build, test and modify APIs |
+| **Flask** |  Used for making web applications and creating API |
+| **HTML CSS** | Basic language for website designing |
+| **Bootstrap** | CSS framework used to create interative website |
+
+
 ## Process Flow
 
 **1. Web Scraping** : We scraped the mobile products data from Amazon, Flipkart and Snapdeal by 
