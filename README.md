@@ -6,6 +6,8 @@ End-to-End Data Science group project conduct by Packt & TeamEpic.
 ## Problem Statement:
 Best Gadget Finder, a new startup to help users compare products at a single platform. It requires to pull data from various e-commerce websites and then compare product names across e-commerce websites. And then having a UI to search gadgets and see a detailed comparative UI.
 
+## Features
+This project will help users to compare products at a single platform. We fetched data from various e-commerce websites like Amazon, Flipkart and Snapdeal and then compared product names across e-commerce websites. And then created a UI to search gadgets. Hence, user can see a comparative UI.
 
 ## Technology stack
 
